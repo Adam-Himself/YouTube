@@ -1,0 +1,56 @@
+body {
+    background-color: white;
+}
+.logo {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.image {
+    width:300px;
+    height:300px;
+}
+
+@keyframes slidein {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.intro {
+
+    background-image: linear-gradient(to right,red,blue,yellow);
+    width:600px;
+    border-radius: 15px;
+    animation: slidein 3s ease-in-out;
+    opacity: 1;
+    transform: translateX(0);
+    color: white;
+    font-size: 70px;
+    position: relative;
+    bottom:300px;
+    font-family: Verdana,sans-serif;
+    
+}
+@media  (max-width:595px){
+    .intro {
+
+        background-image: linear-gradient(to right,red,blue,yellow);
+        width:300px;
+        border-radius: 15px;
+        animation: slidein 3s ease-in-out;
+        opacity: 1;
+        transform: translateX(0);
+        color: white;
+        font-size: 30px;
+        position: relative;
+        bottom:300px;
+        font-family: Verdana,sans-serif;
+        
+    }
+}

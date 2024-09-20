@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watch</title>
+    <link rel="icon" href="../SECTION 1/3146788_youtube_logo_icon.png">
+    <link rel="stylesheet" href="./style3.css">
+</head>
+<body>
+    <div class="x">
+        <iframe id="videoiframe" width="900" height="600" src="" frameborder="" allowfullscreen></iframe>
+    </div>
+    <script>
+        function getVideoIDFromUrl() {
+            const params = new URLSearchParams(window.location.search)
+            return params.get("VIDEOID")
+        }
+        function loadVideo() {
+            const videoid = getVideoIDFromUrl()
+            if (videoid){
+                const iframe = document.getElementById("videoiframe")
+                iframe.src = `https://www.youtube.com/embed/${videoid}`
+            }
+        }
+        window.onload = loadVideo()
+    </script>
+</body>
+</html>
